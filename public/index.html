@@ -22,7 +22,7 @@
                 <h2 class="machine__title">Step 1 - Introduce money</h2>
                 <div class="machine__display">{{ convertPrice(money) }} EUROS</div>
                 <div class="machine__moneys">
-                    <div class="machine__money" data-ng-repeat="price in MONEYS" data-ng-click="addMoney(price)">{{ price >= 100 ? convertPrice(price) : price }}</div>
+                    <button class="machine__money" data-ng-repeat="price in MONEYS" data-ng-click="addMoney(price)">{{ price >= 100 ? convertPrice(price) : price }}</button>
                 </div>
             </div>
 
@@ -30,16 +30,16 @@
             <div class="machine__container">
                 <h2 class="machine__title">Step 2 - Choose sugar</h2>
                 <div class="machine__sugars">
-                    <div class="machine__decrease" data-ng-click="setSugar(sugar - 1)">-</div>
+                    <button class="machine__decrease" data-ng-click="setSugar(sugar - 1)">-</button>
                     <div class="machine__sugar">{{ sugar }}</div>
-                    <div class="machine__increase" data-ng-click="setSugar(sugar + 1)">+</div>
+                    <button class="machine__increase" data-ng-click="setSugar(sugar + 1)">+</button>
                 </div>
             </div>
 
             <!-- DRINK -->
             <div class="machine__container">
                 <h2 class="machine__title">Step 3 - Select your drink</h2>
-                <div class="machine__drink" data-ng-repeat="(key, value) in DRINKS" data-ng-click="setDrink(value)">{{ key }} - {{ convertPrice(value.PRICE) }} Euros</div>
+                <button class="machine__drink" data-ng-repeat="(key, value) in DRINKS" data-ng-click="setDrink(value)">{{ key }} - {{ convertPrice(value.PRICE) }} Euros</button>
             </div>
         </div>
 
