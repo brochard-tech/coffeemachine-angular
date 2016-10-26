@@ -5,7 +5,6 @@
 describe('services testing', function () {
   var mock, service;
 
-
   /* BEFORE */
   beforeEach(module('coffeeApp'));
 
